@@ -1,0 +1,190 @@
+.custom-node {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.custom-node:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-node.selected {
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+}
+
+.node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+}
+
+.node-header:hover {
+  opacity: 0.9;
+}
+
+.node-title {
+  font-size: 14px;
+}
+
+.expand-icon {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.node-config {
+  padding: 16px;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.node-config h4 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.config-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.config-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.config-item:last-child {
+  border-bottom: none;
+}
+
+.config-key {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.config-value {
+  display: flex;
+  align-items: center;
+}
+
+.config-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.config-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.config-select {
+  cursor: pointer;
+  background: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  padding-right: 32px;
+}
+
+.config-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Task nodes */
+.custom-node.task1 .config-input:focus,
+.custom-node.task2 .config-input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+/* Agent nodes */
+.custom-node.agent1 .config-input:focus,
+.custom-node.agent2 .config-input:focus,
+.custom-node.agent3 .config-input:focus {
+  border-color: #9c27b0;
+  box-shadow: 0 0 0 2px rgba(156, 39, 176, 0.1);
+}
+
+/* Custom Handles */
+.custom-handle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #2196f3;
+  transition: all 0.2s ease;
+}
+
+.custom-handle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+}
+
+.input-handle {
+  left: -6px;
+}
+
+.output-handle {
+  right: -6px;
+}
+
+/* Status-based styling for select inputs */
+.config-select option[value="Active"] {
+  color: #2e7d32;
+  background-color: #c8e6c9;
+}
+
+.config-select option[value="Idle"] {
+  color: #f57c00;
+  background-color: #ffecb3;
+}
+
+.config-select option[value="Offline"] {
+  color: #d32f2f;
+  background-color: #ffcdd2;
+}
+
+.config-select option[value="High"] {
+  color: #d32f2f;
+  background-color: #ffcdd2;
+}
+
+.config-select option[value="Medium"] {
+  color: #f57c00;
+  background-color: #ffecb3;
+}
+
+.config-select option[value="Low"] {
+  color: #2e7d32;
+  background-color: #c8e6c9;
+}
