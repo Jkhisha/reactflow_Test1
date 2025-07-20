@@ -1,0 +1,41 @@
+.agent1-node {
+  background: white;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  min-width: 150px;
+  padding: 10px;
+}
+
+.node-header {
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.node-content {
+  padding: 10px 0;
+}
+
+.input-group {
+  margin: 10px 0;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Handle, Position } from 'reactflow';
-import './Task1.css';
+import './Task2.css';
 
-function Task1({ data }) {
+function Task2({ data }) {
   const [expanded, setExpanded] = useState(false);
   const [formData, setFormData] = useState({
-    name: data.name || 'Task1',
+    name: data.name || 'Task2',
     value1: data.value1 || '',
     value2: data.value2 || ''
   });
@@ -39,7 +39,7 @@ function Task1({ data }) {
   };
 
   return (
-    <div className="task1-node">
+    <div className="task2-node">
       <Handle type="target" position={Position.Top} />
       
       <div 
@@ -155,4 +155,4 @@ function Task1({ data }) {
   );
 }
 
-export default Task1;
+export default Task2;
